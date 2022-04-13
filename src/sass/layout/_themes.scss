@@ -1,0 +1,59 @@
+$primary: $white;
+$secondary: $light-grey;
+$text-color: $midnight;
+body {
+  color: $text-color;
+  background-color: $secondary;
+  .card {
+    background-color: $primary;
+  }
+  .searchbar {
+    background-color: $primary;
+    &-input-textbox {
+      background-color: $primary;
+    }
+  }
+  .button-1 {
+    background-color: $violet;
+  }
+  .button-2 {
+    background-color: rgba($violet, 0.1);
+    color: $violet;
+  }
+  .detail-header,
+  .detail-header,
+  .detail-footer {
+    background-color: $primary;
+  }
+  .back-button {
+    outline: 2px solid $primary;
+    color: $primary;
+  }
+}
+.dark {
+  $primary: $very-dark-blue;
+  $secondary: $midnight;
+  $text-color: $white;
+  body {
+    color: $text-color;
+    background-color: $secondary;
+    .card {
+      background-color: $primary;
+    }
+    .searchbar {
+      background-color: $primary;
+      &-input-textbox {
+        background-color: $primary;
+      }
+    }
+    .button-2 {
+      background-color: rgba($white, 0.1);
+      color: $white;
+    }
+    .detail-header,
+    .detail-header,
+    .detail-footer {
+      background-color: $primary;
+    }
+  }
+}

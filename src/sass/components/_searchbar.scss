@@ -1,0 +1,42 @@
+.searchbar {
+  @extend .d-flex;
+  margin: 45px auto;
+  padding: 16px;
+  border-radius: 6px;
+  justify-content: space-between;
+  max-width: calc($phone - 2rem);
+  @include respond(tab) {
+    padding: 1.5rem;
+    max-width: calc($tab - 3rem);
+  }
+  @include respond(big-desktop) {
+    padding: 2rem;
+    max-width: calc($big-desktop - 4rem);
+  }
+  &-input {
+    @extend .d-flex;
+    &-textbox {
+      @extend .d-flex;
+      margin-left: 1rem;
+      border: none;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  &-input:not(:first-of-type) {
+    display: none;
+    @include respond(tab) {
+      display: flex;
+    }
+  }
+  &-input:last-of-type {
+    margin-left: auto;
+  }
+  &-icon {
+    @include respond(tab) {
+      display: none;
+    }
+  }
+}

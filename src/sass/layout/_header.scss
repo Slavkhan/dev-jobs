@@ -1,0 +1,18 @@
+.header {
+  margin: auto;
+  padding-top: 32px;
+  max-width: 327px;
+
+  @include respond(tab) {
+    max-width: 689px;
+    padding-top: 42px;
+  }
+  @include respond(big-desktop) {
+    max-width: 1110px;
+    padding-top: 45px;
+  }
+
+  &-logo-container {
+    @extend .d-flex, .justify-between;
+  }
+}

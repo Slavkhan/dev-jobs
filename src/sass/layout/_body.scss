@@ -1,0 +1,21 @@
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  background: $light-grey url(../../../public/assets/images/mobile/bg-pattern-header.svg) center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include respond(tab) {
+    background-image: url(../../../public/assets/images/tablet/bg-pattern-header.svg);
+  }
+
+  @include respond(big-desktop) {
+    background-image: url(../../../public/assets/images/desktop/bg-pattern-header.svg);
+  }
+  button {
+    @extend .button-1;
+    margin: auto;
+    margin-bottom: 62px;
+  }
+}

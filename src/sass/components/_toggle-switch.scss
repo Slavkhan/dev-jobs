@@ -1,0 +1,40 @@
+.toggle-switch-container {
+  @extend .d-flex, .align-center, .justify-between;
+  width: 112px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+
+  & input[type='checkbox'] {
+    display: none;
+  }
+  & .switch {
+    position: absolute;
+    cursor: pointer;
+    background-color: $white;
+    border-radius: 25px;
+    inset: 0;
+    transition: background-color 0.2s ease;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 5px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background-color: $violet;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+  }
+}
+.toggle-switch input[type='checkbox']:checked + .switch::before {
+  transform: translateX(25px);
+}
+.toggle-switch-container:hover .switch::before {
+  background-color: $light-violet;
+}

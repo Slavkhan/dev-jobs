@@ -1,0 +1,15 @@
+.back-button {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-20px);
+  @include respond(tab) {
+    top: 50px;
+    left: 50px;
+    transform: translateX(20px);
+  }
+}

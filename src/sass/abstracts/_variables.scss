@@ -1,0 +1,28 @@
+//----COLORS----
+
+//PRIMARY COLORS
+$violet: #5964e0;
+$light-violet: #939bf4;
+$very-dark-blue: #19202d;
+$midnight: #121721;
+
+//SECONDARY COLORS
+$white: #ffffff;
+$light-grey: #f4f6f8;
+$grey: #9daec2;
+$dark-grey: #6e8098;
+
+$primary: $white;
+$secondary: $light-grey;
+$text-color: $midnight;
+
+// UTILITIES
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+// BREAKPOINTS
+$phone: 327px;
+$tab: 689px;
+$big-desktop: 1110px;

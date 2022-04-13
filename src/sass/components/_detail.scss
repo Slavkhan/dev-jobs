@@ -1,0 +1,154 @@
+.detail {
+  max-width: $phone;
+  margin: auto;
+
+  @include respond(tab) {
+    max-width: $tab;
+  }
+  @include respond(big-desktop) {
+    max-width: $big-desktop;
+  }
+  &-header {
+    position: relative;
+    flex-direction: column;
+    border-radius: 6px;
+    display: flex;
+    padding: 30px;
+    margin-top: 45px;
+    align-items: center;
+    justify-content: center;
+    .card-logo {
+      @include respond(tab) {
+        display: none;
+      }
+    }
+    @include respond(tab) {
+      padding: 0;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    &-logo {
+      display: none;
+      width: 140px;
+      height: 140px;
+      @include respond(tab) {
+        display: flex;
+      }
+      & img {
+        margin: auto;
+        transform: scale(2);
+      }
+    }
+    &-info {
+      text-align: center;
+      margin-bottom: 25px;
+      @include respond(tab) {
+        margin-left: 40px;
+      }
+    }
+  }
+  &-button {
+    @extend .button, .button-2;
+    @include respond(tab) {
+      margin-left: auto;
+      margin-right: 45px;
+    }
+  }
+  &-body {
+    @extend .card;
+    margin-top: 45px;
+    .card-text-tertiary {
+      margin-top: 0;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      @include respond(tab) {
+        flex-direction: row;
+      }
+      & button {
+        @extend .button, .button-1;
+        width: 100%;
+        margin-top: 50px;
+        @include respond(tab) {
+          margin: 0;
+          width: initial;
+        }
+      }
+    }
+    &-paragraph {
+      @extend .card-text-secondary;
+      margin-top: 2rem;
+    }
+    &-heading {
+      margin-top: 40px;
+    }
+    &-ul {
+      margin-top: 2rem;
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        margin-top: 8px;
+        color: $dark-grey;
+        padding-left: 1em;
+        text-indent: -1em;
+      }
+
+      li:before {
+        content: '\2022';
+        font-weight: bold;
+        color: $violet;
+        padding-right: 10px;
+      }
+    }
+    &-ol {
+      margin-top: 2rem;
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        counter-increment: item;
+        margin-top: 8px;
+        color: $dark-grey;
+        padding-left: 1em;
+        text-indent: -1em;
+      }
+      li:before {
+        font-weight: bold;
+        content: counter(item);
+        color: $violet;
+        padding-right: 10px;
+      }
+    }
+  }
+  &-footer {
+    border-radius: 6px;
+    display: flex;
+    margin-top: 45px;
+    padding: 1.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    @include respond(tab) {
+      flex-direction: row;
+      overflow: hidden;
+    }
+    &-info {
+      display: none;
+      @include respond(tab) {
+        display: block;
+      }
+    }
+    & button {
+      @extend .button, .button-1;
+      width: 100%;
+      @include respond(tab) {
+        margin: 0;
+        width: initial;
+      }
+    }
+  }
+}
